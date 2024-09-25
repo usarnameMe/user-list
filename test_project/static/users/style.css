@@ -1,0 +1,48 @@
+/* Container styling */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Table styling */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th, .user-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Table headers */
+.user-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Profile image styling */
+.profile-image {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover; /* Ensures the image retains its aspect ratio */
+    border-radius: 10px;
+}
+
+/* Add User link styling */
+.add-user-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.add-user-link:hover {
+    background-color: #45a049;
+}
