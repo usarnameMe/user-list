@@ -8,13 +8,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$z7%tq1$8e!(kj1pgyqf((7*rr$uxqz-^gwq1yr8&q)==3af8_'
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-$z7%tq1$8e!(kj1pgyqf((7*rr$uxqz-^gwq1yr8&q)==3af8_')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['user-list-e5rr.onrender.com','0.0.0.0', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['user-list-e5rr.onrender.com', '0.0.0.0', 'localhost', '127.0.0.1']
 
+# Add CSRF trusted origins to allow requests from Render
+CSRF_TRUSTED_ORIGINS = ['https://user-list-e5rr.onrender.com']
 
 # Application definition
 
@@ -44,8 +46,7 @@ ROOT_URLCONF = 'test_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
