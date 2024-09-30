@@ -62,39 +62,6 @@ form input[type="file"]:focus {
     box-shadow: 0 0 8px rgba(154, 3, 30, 0.3);
 }
 
-.custom-file-upload {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fb8b24;
-    color: white;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.custom-file-upload:hover {
-    background-color: #e36414;
-    transform: translateY(-2px);
-}
-
-.custom-file-upload input[type="file"] {
-    display: none;
-}
-
-.file-upload-label {
-    cursor: pointer;
-}
-
-#file-upload-name {
-    font-size: 14px;
-    color: #ffffff;
-    margin-left: 15px;
-}
-
 form button {
     display: block;
     width: 100%;
